@@ -1,12 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" href="Icon.png" type="image/png">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>This is my portfolio</h1>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">ABOUT ME</a>
+        <a href="#news">EDUCATION</a>
+        <a href="#about">PROJECTS</a>
+        <a href="#contact">ACCOUNTS</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+
+            <!-- Left Column -->
+            <div class="w3-third">
+
+                <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                        <img src="Profile.png" style="width:100%" alt="Avatar">
+                        <div class="w3-display-bottomleft w3-container w3-text-black">
+                            <h2>Aeron James A. Castillo</h2>
+                        </div>
+                    </div>
+                    <div class="w3-container">
+                        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-black"></i>IT Network Technology Student</p>
+                        <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-black"></i>Batangas, Philippines</p>
+                        <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-black"></i>aeronjamescastillo6@gmail.com</p>
+                        <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-black"></i>09611982230</p>
+                        <hr>
+
+                        <p class="w3-large"><b><i
+                                    class="fa fa-asterisk fa-fw w3-margin-right w3-text-black"></i>Skills</b></p>
+                        <p>Adobe Photoshop</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:80%">80%</div>
+                        </div>
+                        <p>Programming Languages</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:80%">
+                                <div class="w3-center w3-text-white">80%</div>
+                            </div>
+                        </div>
+                        <p>Microsoft Office</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:90%">90%</div>
+                        </div>
+                        <p>Networking</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:50%">50%</div>
+                        </div>
+                        <p>Graphic Designing</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:70%">70%</div>
+                        </div>
+                        <br>
+
+                        <p class="w3-large w3-text-theme"><b><i
+                                    class="fa fa-globe fa-fw w3-margin-right w3-text-black"></i>Languages</b></p>
+                        <p>English</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-black" style="height:24px;width:70%"></div>
+                        </div>
+                        <p>Tagalog</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-black" style="height:24px;width:100%"></div>
+                        </div>
+                        <br>
+                    </div>
+                </div><br>
+
+                <!-- End Left Column -->
+            </div>
+            <!-- Right Column -->
+            <div class="w3-twothird">
+
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i
+                            class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Work Experience
+                    </h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Creotec Work Immersion Program</b></h5>
+                        <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022 - Feb 2022</h6>
+                        <p>Helped my group department to finish tasks assigned by CREOTEC and learned that communication and participation are key to faster workflow.</p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-card w3-white">
+                    <h2 class="w3-text-grey w3-padding-16"><i
+                            class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Education</h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Batangas State University - Lipa Campus</b></h5>
+                        <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - - <span
+                            class="w3-tag w3-black w3-round">Current</span></h6></h6>
+                        <p>Information Technology Major in Network Technology</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Saint Joseph Academy - San Jose, Batangas</b></h5>
+                        <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2022</h6>
+                        <p>Jr. - Sr. High School</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Padre Imo Luna Memorial Elementary School - San Jose, Batangas</b></h5>
+                        <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2016</h6>
+                        <p>Elementary</p><br>
+                    </div>
+                </div>
+
+                <!-- End Right Column -->
+            </div>
+
+            <!-- End Grid -->
+        </div>
+
+        <!-- End Page Container -->
+    </div>
+
+    </div>
 </body>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
 </html>
