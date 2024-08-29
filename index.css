@@ -1,27 +1,28 @@
 body {
     margin: 0;
-    background-color: black;
+    background-image: url('background.png');
     font-family: "Trirong", serif;
   }
   
   .topnav {
     overflow: hidden;
-    background-color: black;
+    background-color: white;
     text-align: center; /* Center the text */
   }
   
   .topnav a {
     display: inline-block; /* Make the links inline-block */
-    color: white;
+    color: #4994ec;
     text-align: center;
     letter-spacing: 2px;
     padding: 14px 20px;
     text-decoration: none;
     font-size: 17px;
+    font-weight: 900;
   }
 
   h2 {
-    color: black;
+    color: #4994ec;
     text-align: center;
     letter-spacing: 2px;
     padding: 14px 20px;
@@ -31,10 +32,19 @@ body {
   }
   
   .topnav a:hover {
-    opacity: 0.5;
+    padding: 10px 20px;
+    background-color: #4994ec;
+    color: white;
   }
   
+  .topnav a.active {
+    background-color: #4994ec;
+    color: white;
+    padding: 10px;
+  }
+
   .topnav .icon {
+    padding: 10px;
     display: none;
   }
   
