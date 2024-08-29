@@ -64,3 +64,31 @@ body {
     }
   }
   
+  /* Responsive Table */
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; /* Adjust spacing between icons */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Style for each icon block */
+.icon-block {
+    text-align: center;
+    flex: 1 1 150px; /* Adjust width of each icon block */
+    max-width: 70px;
+    padding: 10px;
+}
+
+/* Make images responsive */
+.icon-block img {
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+}
+
+/* Add margin to the bottom of the container */
+.table-container hr {
+    margin-top: 20px;
+}
