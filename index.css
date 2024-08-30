@@ -42,24 +42,18 @@ body {
     color: white;
     padding: 10px;
   }
-
-  .topnav .icon {
-    padding: 10px;
-    display: none;
-  }
   
-  
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {
-      position: relative;
+  @media screen and (max-width: 768px) {
+    .topnav a {
+        font-size: 15px; /* Smaller font size for screens 768px or less */
     }
+}
 
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+@media screen and (max-width: 480px) {
+    .topnav a {
+        font-size: 13px; /* Even smaller font size for screens 480px or less */
     }
-  }
+}
   
   /* Responsive Table */
 .table-container {
