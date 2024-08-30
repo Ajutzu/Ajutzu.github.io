@@ -8,20 +8,51 @@ body {
     overflow: hidden;
     background-color: white;
     text-align: center; /* Center the text */
-  }
-  
-  .topnav a {
-    display: inline-block; /* Make the links inline-block */
-    color: #4994ec;
-    text-align: center;
-    letter-spacing: 2px;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 900;
-  }
+    padding: 10px;
+    position: fixed; /* Fix the navbar to the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-  h2 {
+.topnav a {
+  display: inline-block; /* Make the links inline-block */
+  color: #4994ec;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.topnav a:hover {
+    padding: 10px 20px;
+    background-color: #4994ec;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #4994ec;
+    color: white;
+    padding: 10px;
+}
+
+.content {
+    padding-top: 60px; /* Ensure content is below the fixed navbar */
+}
+
+.tab-content {
+    display: none; /* Hide all tab contents by default */
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block; /* Show active tab content */
+}
+
+h2 {
     color: #4994ec;
     text-align: center;
     letter-spacing: 2px;
@@ -29,32 +60,20 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-  }
-  
-  .topnav a:hover {
-    padding: 10px 20px;
-    background-color: #4994ec;
-    color: white;
-  }
-  
-  .topnav a.active {
-    background-color: #4994ec;
-    color: white;
-    padding: 10px;
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     .topnav a {
-        font-size: 15px; /* Smaller font size for screens 768px or less */
+        font-size: 13px; /* Smaller font size for screens 768px or less */
     }
 }
 
 @media screen and (max-width: 480px) {
     .topnav a {
-        font-size: 13px; /* Even smaller font size for screens 480px or less */
+        font-size: 11px; /* Even smaller font size for screens 480px or less */
     }
 }
-  
   /* Responsive Table */
 .table-container {
     display: flex;
@@ -82,4 +101,40 @@ body {
 /* Add margin to the bottom of the container */
 .table-container hr {
     margin-top: 20px;
+}
+
+.button-container {
+  text-align: left; /* Aligns the button to the left */
+  padding: 10px; /* Adds some padding around the button container */
+}
+
+.responsive-button {
+  background-color: #4994ec; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Removes the border */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Button hover effect */
+.responsive-button:hover {
+  background-color: #3a7bcc; /* Darker blue on hover */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .responsive-button {
+      font-size: 14px; /* Smaller font size for smaller screens */
+      padding: 8px 16px; /* Smaller padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .responsive-button {
+      font-size: 12px; /* Even smaller font size for very small screens */
+      padding: 6px 12px; /* Even smaller padding for very small screens */
+  }
 }
