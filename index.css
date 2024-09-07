@@ -1,19 +1,19 @@
 body {
-    margin: 0;
-    background-image: url('images/background.png');
-    font-family: "Trirong", serif;
-  }
-  
-  .topnav {
-    overflow: hidden;
-    background-color: white;
-    text-align: center; /* Center the text */
-    padding: 10px;
-    position: fixed; /* Fix the navbar to the top */
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+  background-image: url("images/background.png");
+  font-family: "Trirong", serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  text-align: center; /* Center the text */
+  padding: 10px;
+  position: fixed; /* Fix the navbar to the top */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .topnav a {
@@ -28,85 +28,85 @@ body {
 }
 
 .topnav a:hover {
-    padding: 10px 20px;
-    background-color: #4994ec;
-    color: white;
+  padding: 10px 20px;
+  background-color: #4994ec;
+  color: white;
 }
 
 .topnav a.active {
-    background-color: #4994ec;
-    color: white;
-    padding: 10px;
+  background-color: #4994ec;
+  color: white;
+  padding: 10px;
 }
 
 .content {
-    padding-top: 60px; /* Ensure content is below the fixed navbar */
+  padding-top: 60px; /* Ensure content is below the fixed navbar */
 }
 
 .tab-content {
-    display: none; /* Hide all tab contents by default */
-    padding: 20px;
+  display: none; /* Hide all tab contents by default */
+  padding: 20px;
 }
 
 .tab-content.active {
-    display: block; /* Show active tab content */
+  display: block; /* Show active tab content */
 }
 
 h2 {
-    color: #4994ec;
-    text-align: center;
-    letter-spacing: 2px;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
+  color: #4994ec;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 li {
-    color: #4994ec; /* Changes the text color */
-    font-size: 13px;
-    padding: 2px;
-  }
+  color: #4994ec; /* Changes the text color */
+  font-size: 13px;
+  padding: 2px;
+}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .topnav a {
-        font-size: 13px; /* Smaller font size for screens 768px or less */
-    }
+  .topnav a {
+    font-size: 13px; /* Smaller font size for screens 768px or less */
+  }
 }
 /* Hello */
 @media screen and (max-width: 480px) {
-    .topnav a {
-        font-size: 11px; /* Even smaller font size for screens 480px or less */
-    }
+  .topnav a {
+    font-size: 11px; /* Even smaller font size for screens 480px or less */
+  }
 }
-  /* Responsive Table */
+/* Responsive Table */
 .table-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px; /* Adjust spacing between icons */
-    padding: 5px;
-    border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px; /* Adjust spacing between icons */
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* Style for each icon block */
 .icon-block {
-    text-align: center;
-    flex: 1 1 150px; /* Adjust width of each icon block */
-    max-width: 120px;
-    padding: 10px;
+  text-align: center;
+  flex: 1 1 150px; /* Adjust width of each icon block */
+  max-width: 120px;
+  padding: 10px;
 }
 
 /* Make images responsive */
 .icon-block img {
-    width: 50px; /* Icon size */
-    height: 50px; /* Icon size */
+  width: 50px; /* Icon size */
+  height: 50px; /* Icon size */
 }
 
 /* Add margin to the bottom of the container */
 .table-container hr {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .button-container {
@@ -133,14 +133,51 @@ li {
 /* Responsive design */
 @media screen and (max-width: 768px) {
   .responsive-button {
-      font-size: 14px; /* Smaller font size for smaller screens */
-      padding: 8px 16px; /* Smaller padding for smaller screens */
+    font-size: 14px; /* Smaller font size for smaller screens */
+    padding: 8px 16px; /* Smaller padding for smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
   .responsive-button {
-      font-size: 12px; /* Even smaller font size for very small screens */
-      padding: 6px 12px; /* Even smaller padding for very small screens */
+    font-size: 12px; /* Even smaller font size for very small screens */
+    padding: 6px 12px; /* Even smaller padding for very small screens */
   }
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  border: 3px solid white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000;
+  background-image: url('images/Meme.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#popup button {
+  padding: 10px 20px;
+  background-color: #3a7bcc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }

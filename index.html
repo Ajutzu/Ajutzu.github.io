@@ -389,8 +389,26 @@
                     style="text-decoration: none;" class="w3-text-blue">W3.CSS</a></p>
         </footer>
 
+        <div id="overlay"></div>
+        <div id="popup">
+            <h2 style="color:white">Why are you gae</h2>
+            <button onclick="closePopup()">Close</button>
+        </div>
 
         <script>
+                    function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Show popup after 10 seconds
+        setTimeout(showPopup, 7000);
+
             // JavaScript to handle tab switching
             document.querySelectorAll('.topnav a').forEach(tab => {
                 tab.addEventListener('click', function (event) {
