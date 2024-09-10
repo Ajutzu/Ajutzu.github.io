@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font API -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <!-- W3.CSS API -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Web Title-->
+    <title>My Portfolio</title>
+    <!-- Web Icon -->
+    <link rel="icon" href="images/duckIcon.png" />
+    <!-- My Own Stylesheet-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <video autoplay muted loop id="background-video">
+        <source src="images/Background.mp4" type="video/mp4" />
+      </video>
+      <!-- Top Section -->
+      <div class="w3-display-topleft w3-padding-large w3-large">
+        <a
+          href="https://github.com/Ajutzu?tab=overview&from=2024-09-01&to=2024-09-10"
+          class="upgrade"
+          >ABOUT ME</a
+        >
+      </div>
+      <div class="w3-display-topright w3-padding-large w3-large">
+        <a href="#" class="upgrade" onclick="showPopup()">PROJECTS</a>
+      </div>
+      <!--About Me Section-->
+      <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top" id="typing-text">
+          WELCOME TO MY PORTFOLIO
+        </h1>
+        <hr class="w3-border-grey" style="margin: auto; width: 40%" />
+        <p class="w3-large w3-center">
+          As an IT undergraduate at Batangas State University, I have a strong
+          passion <br />for coding, technology, and using software development
+          to solve real-world challenges.
+        </p>
+        <p class="w3-xlarge w3-center w3-animate-top">TECH STACK</p>
+        <hr class="w3-border-grey" style="margin: auto; width: 20%" />
+        <div class="badge-container">
+          <a href="https://www.mongodb.com/" target="_blank">
+            <img
+              src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
+              alt="MongoDB"
+            />
+          </a>
+
+          <a href="https://www.w3schools.com/cpp/" target="_blank">
+            <img
+              src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+              alt="C++"
+            />
+          </a>
+
+          <a href="https://www.w3schools.com/css/" target="_blank">
+            <img
+              src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+              alt="CSS3"
+            />
+          </a>
+
+          <a href="https://www.w3.org/html/" target="_blank">
+            <img
+              src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+              alt="HTML5"
+            />
+          </a>
+
+          <a href="https://www.java.com" target="_blank">
+            <img
+              src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"
+              alt="Java"
+            />
+          </a>
+
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            target="_blank"
+          >
+            <img
+              src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+              alt="JavaScript"
+            />
+          </a>
+
+          <a href="https://www.mysql.com/" target="_blank">
+            <img
+              src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+              alt="MySQL"
+            />
+          </a>
+
+          <a href="https://www.photoshop.com/en" target="_blank">
+            <img
+              src="https://img.shields.io/badge/Adobe Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white"
+              alt="Photoshop"
+            />
+          </a>
+
+          <a href="https://www.postgresql.org" target="_blank">
+            <img
+              src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
+              alt="PostgreSQL"
+            />
+          </a>
+
+          <a href="https://www.python.org" target="_blank">
+            <img
+              src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+              alt="Python"
+            />
+          </a>
+
+          <a href="https://www.php.net/" target="_blank">
+            <img
+              src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
+              alt="PHP"
+            />
+          </a>
+        </div>
+      </div>
+      <!--Bottom Section-->
+      <div class="w3-display-bottomleft w3-padding-large w3-large">
+        <a
+          href="https://github.com/Ajutzu?tab=overview&from=2024-09-01&to=2024-09-10"
+          class="upgrade"
+          >Github</a
+        >
+      </div>
+
+      <div class="w3-display-bottomright w3-padding-large w3-large">
+        <a
+          href="https://github.com/Ajutzu?tab=overview&from=2024-09-01&to=2024-09-10"
+          class="upgrade"
+          >Curriculum Vitae</a
+        >
+      </div>
+    </div>
+    <!--Java Script-->
+    <script src="script.js"></script>
+
+    <!--Project Content-->
+
+    <div id="popup-overlay" class="popup-overlay"></div>
+    <div id="popup-content" class="popup">
+      <div class="header">
+        <button onclick="hidePopup()">X</button>
+      </div>
+      <!-- Carousel -->
+      <div class="carousel-container w3-content w3-display-container">
+          <div class="mySlides active">
+              <img src="images/ChatBot.png" style="width:100%">
+              <div class="description"><strong>Simple Chat Bot:</strong> This is the first project I made for advanced computer programming. It is a simple chat bot that uses an algorithm to check the probability of your questions. The GUI and backend are created using Python’s Tkinter library.         
+                <a href="https://github.com/Ajutzu/Chat-Bot-Project-ACP" class="linkenpark" >View on Repository</a></div>
+          </div>
+          <div class="mySlides">
+              <img src="images/Abus.png" style="width:100%">
+              <div class="description"><strong>Appointment and Management System:</strong> This is the second project I made for Advanced Database Management Systems. It uses XAMPP for its server and includes the fundamentals of SQL CRUD operations. I used PHP, HTML, CSS, and JavaScript for the website, while the management system is built using Python.                
+                <a href="https://github.com/Ajutzu/System-Project-ADBMS" class="linkenpark">View on Repository</a></div>
+          </div>
+          <div class="mySlides">
+              <img src="images/Portfolio.png" style="width:100%">
+              <div class="description"><strong>Portfolio Website</strong> I created this static website to showcase my skills and experience. It features a list of my projects and provides an overview of my work. 
+                <a href="https://github.com/Ajutzu/Ajutzu.github.io" class="linkenpark">View on Repository</a></div>
+          </div>
+
+          <a class="w3-btn w3-display-left" style="color: white;" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="w3-btn w3-display-right" style="color: white;" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+  </div>
+  </body>
+</html>
