@@ -1,427 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <style>
+      body,
+      h1 {
+        font-family: "Raleway", sans-serif;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="icon" href="Images/Icon.png" type="image/png">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+      body,
+      html {
+        height: 100%;
+      }
 
-<body>
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">ABOUT ME</a>
-        <a href="#education">EXPERIENCE</a>
-        <a href="#projects">PROJECTS</a>
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .bgimg {
+        background-image: url("");
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <video autoplay muted loop id="background-video">
+        <source src="images/Background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="w3-display-topleft w3-padding-large w3-xlarge">Aj Portfolio</div>
+      <div class="w3-display-topright w3-padding-large w3-xlarge"><a href="https://github.com/Ajutzu?tab=overview&from=2024-09-01&to=2024-09-10">Github</a></div>
+      <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top">CREATING NEW DESIGN</h1>
+        <hr class="w3-border-grey" style="margin: auto; width: 40%" />
+        <p class="w3-large w3-center">10 days left</p>
+      </div>
+      <div class="w3-display-bottomleft w3-padding-large"></div>
     </div>
-
-    <div class="content">
-        <div id="home" class="tab-content active">
-            <!-- Page Container -->
-            <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-                <!-- The Grid -->
-                <div class="w3-row-padding">
-
-
-                    <!-- Left Column -->
-                    <div class="w3-third">
-
-                        <div class="w3-white w3-text-grey w3-card-4">
-                            <div class="w3-display-container">
-                                <img src="images\Profile.png" style="width:100%" alt="Avatar">
-                                <div class="w3-display-bottomleft w3-container w3-text-blue">
-                                    <h2>Aeron James A. Castillo</h2>
-                                </div>
-                            </div>
-                            <div class="w3-container">
-                                <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>IT Network
-                                    Technology Student</p>
-                                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>Batangas,
-                                    Philippines</p>
-                                <p><i
-                                        class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>aeronjamescastillo6@gmail.com
-                                </p>
-                                <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue"></i>09611982230
-                                </p>
-                                <hr>
-
-                                <p class="w3-large"><b><i
-                                            class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
-                                <p>Programming Languages</p>
-                                <ul>
-                                    <li>PHP - Beginner</li>
-                                    <li>C# - Entry</li>
-                                    <li>C++ - Beginner</li>
-                                    <li>Python - Beginner</li>
-                                    <li>Java - Beginner</li>
-                                    <li>JavaScript - Entry</li>
-                                  </ul>
-                                <p>Microsoft Office</p>
-                                <ul>
-                                    <li>Excel - Intermediate</li>
-                                    <li>Word - Intermediate</li>
-                                    <li>Powerpoint - Intermediate</li>
-                                  </ul>
-                                <p>Database</p>
-                                <ul>
-                                    <li>PostgresSQL- Intermediate</li>
-                                    <li>MongoDB - Entry</li>
-                                    <li>MySQL - Beginner</li>
-                                  </ul>
-                                <p>Web Development</p>
-                                <ul>
-                                    <li>HTML - Beginner</li>
-                                    <li>CSS - Beginner</li>
-                                    <li>Bootstrap - Entry</li>
-                                  </ul>
-                                <p>Graphic Designing</p>
-                                <ul>
-                                    <li>Photoshop - Beginner</li>
-                                    <li>Canva - Advance</li>
-                                </ul>
-                                <hr>
-
-                                <p class="w3-large w3-text-theme"><b><i
-                                            class="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>Languages</b></p>
-                                <p>English - <k style="color:#4994ec; font-size: 13px; padding: 2px;">Slightly Proficient</k></p>
-
-                                <p>Tagalog - <k style="color:#4994ec; font-size: 13px; padding: 2px;">Very Proficient</k></p>
-                                <br>
-                            </div>
-                        </div><br>
-
-                        <!-- End Left Column -->
-                    </div>
-                    <!-- Right Column -->
-                    <div class="w3-twothird">
-
-
-                        <div class="w3-container w3-card w3-white w3-margin-bottom">
-                            <h2 class="w3-text-grey w3-padding-16"><i
-                                    class="fa fa-asterisk fa-fw w3-margin-right w3-xlarge w3-text-blue"></i>About Me
-                            </h2>
-                            <div class="w3-container">
-                                <p style="text-align: justify;">As an IT student at Batangas State University - Lipa
-                                    Campus, I excel in various programming languages, including proficiency in Adobe
-                                    Photoshop. With a knack for troubleshooting both operating system and network, my
-                                    passion for technology and creativity drives me. Eager to contribute to innovative
-                                    projects, I'm committed to continuous learning in IT. </p>
-                                <hr>
-                            </div>
-                        </div>
-
-                        <div class="w3-container w3-card w3-white w3-margin-bottom">
-                            <h2 class="w3-text-grey w3-padding-16"><i
-                                    class="fa fa-suitcase fa-fw w3-margin-right w3-xlarge w3-text-blue"></i>Uses
-                            </h2>
-                            <div class="w3-container">
-                                <p>I often get asked about what software or hardware I use, so this page will serve as a
-                                    living document and a place to point curious readers to when I get asked.</p>
-                                <p>My favorite languages are C++ and Python. I am currently undecided about which one I should master for my future job.
-                                     My dream is to become a software engineer or a web developer.</p>
-                                <h5 class="w3-opacity"><b>Editor + Terminal</b></h5>
-                                <p>I'm using Visual Studio Code, my main browser is Chrome, and my terminal using is
-                                    Windows Terminal.
-                                </p>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="w3-container w3-card w3-white w3-margin-bottom">
-                            <h2 class="w3-text-grey w3-padding-16"><i
-                                    class="fa fa-globe fa-fw w3-margin-right w3-xlarge w3-text-blue"></i>Programming
-                                Languages/Tools
-                            </h2>
-                            <div class="w3-container">
-                                <div class="w3-container table-container">
-                                    <div class="icon-block">
-                                        <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                                                alt="cplusplus" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-                                                alt="css3" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                                                alt="html5" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.java.com" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-                                                alt="java" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-                                                alt="mysql" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFo0J6E3t1f-LsIqy_sgwody_oh3viUwV66Q&s"
-                                                alt="photoshop" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.php.net" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
-                                                alt="php" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
-                                                alt="postgresql" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.python.org" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-                                                alt="python" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.javascript.com" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                                                alt="javascript" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.canva.com" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg" alt="canva" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original-wordmark.svg" alt="bootstrap" />
-                                        </a>
-                                    </div>
-                                    <div class="icon-block">
-                                        <a href="https://www.microsoft.com/microsoft-365" target="_blank" rel="noreferrer">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Microsoft_365_%282022%29.svg/1862px-Microsoft_365_%282022%29.svg.png" alt="microsoft-office" />
-                                        </a>
-                                    </div>                                    
-                                    <div class="icon-block">
-                                        <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="vscode" />
-                                        </a>
-                                    </div>
-                                    
-                                    
-                                    
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
-
-                        <div class="w3-container w3-card w3-white">
-                            <h2 class="w3-text-grey w3-padding-16"><i
-                                    class="fa fa-certificate fa-fw w3-margin-right w3-xlarge w3-text-blue"></i>Education
-                            </h2>
-                            <div class="w3-container">
-                                <h5 class="w3-opacity"><b>Batangas State University - Lipa Campus</b></h5>
-                                <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 -
-                                    <span class="w3-tag w3-blue w3-round">Current</span>
-                                </h6>
-                                </h6>
-                                <p>Information Technology Major in Network Technology</p>
-                                <hr>
-                            </div>
-                            <div class="w3-container">
-                                <h5 class="w3-opacity"><b>Saint Joseph Academy - San Jose, Batangas</b></h5>
-                                <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2022
-                                </h6>
-                                <p>Jr. - Sr. High School</p>
-                                <hr>
-                            </div>
-                            <div class="w3-container">
-                                <h5 class="w3-opacity"><b>Padre Imo Luna Memorial Elementary School - San Jose,
-                                        Batangas</b></h5>
-                                <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2016
-                                </h6>
-                                <p>Elementary</p><br>
-                            </div>
-
-                        </div>
-
-                        <!-- End Right Column -->
-                    </div>
-                    <!-- End Grid -->
-                </div>
-                <!-- End Page Container -->
-            </div>
-        </div>
-        <div id="education" class="tab-content">
-            <div class="w3-content w3-margin-top" style="max-width:1400px;">
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
-                    <h2 class="w3-text-grey w3-padding-16"><i
-                            class="fa fa-suitcase fa-fw w3-margin-right w3-xlarge w3-text-blue"></i>Work
-                        Experience
-                    </h2>
-                    <div class="w3-container">
-                        <h5 class="w3-opacity"><b>Creotec Work Immersion Program</b></h5>
-                        <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022 -
-                            Feb 2022</h6>
-                        <p>Helped my group department to finish tasks assigned by CREOTEC and learned that
-                            communication and participation are key to faster workflow.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="w3-content w3-margin-top" style="max-width:1400px;">
-                    <div class="w3-container w3-card w3-white">
-                        <h2 class="w3-text-grey w3-padding-16"><i
-                                class="fa fa-certificate fa-fw w3-margin-right w3-xlarge w3-text-blue"></i>Awards</h2>
-                        <div class="w3-container">
-                            <h5 class="w3-opacity"><b>Spookython: The Battle of Tech Innovators</b></h5>
-                            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>JAN 2021</h6>
-                            <p>
-                                Spookython: 3rd Place Codechum C++ Coding Competition from Batangas State University -
-                                Lipa Campus</p>
-                            <div class="button-container">
-                                <button class="responsive-button">Certificate</button>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="w3-container">
-                            <h5 class="w3-opacity"><b>N/A</b></h5>
-                            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>N/A</h6>
-                            <p>N/A</p>
-                            <hr>
-                        </div>
-                        <div class="w3-container">
-                            <h5 class="w3-opacity"><b>N/A</b>
-                            </h5>
-                            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>N/A</h6>
-                            <p>N/A</p><br>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div id="projects" class="tab-content">
-            <div class="w3-content w3-margin-top" style="max-width:1400px;">
-                <div class="w3-container w3-card w3-white">
-                    <div class="w3-container">
-                        <h2 class="w3-opacity"><b>Abu's Resort Booking System</b></h2>
-                        <h6 class="w3-opacity"><b>Python, Html, PostgreSQL, CSS, PHP, JavaScript</b></h6>
-                        <p>
-                            This is a booking system I made for my final project in Advanced Database Systems. I implemented a website connected to a PostgreSQL database and an admin management system to manage the data from the database.</p>
-                        <div class="button-container">
-                            <a href="https://github.com/Ajutzu/System-Project-ADBMS" target="_blank">
-                                <button class="responsive-button">Repository</button>
-                            </a>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-                <div class="w3-content w3-margin-top" style="max-width:1400px;">
-                    <div class="w3-container w3-card w3-white">
-                        <div class="w3-container">
-                            <h2 class="w3-opacity"><b>Simple ChatBot Application</b></h2>
-                            <h6 class="w3-opacity"><b>Python</b></h6>
-                            <p> A simple ChatBot Application using python
-                                </p>
-                            <div class="button-container">
-                                <a href="https://github.com/Ajutzu/Chat-Bot-Project-ACP" target="_blank">
-                                    <button class="responsive-button">Repository</button>
-                                </a>                            </div>
-                            <hr>
-                        </div>
-                    </div>
-                    <div class="w3-content w3-margin-top" style="max-width:1400px;">
-                        <div class="w3-container w3-card w3-white">
-                            <div class="w3-container">
-                                <h2 class="w3-opacity"><b>Portfolio Website</b></h2>
-                                <h6 class="w3-opacity"><b>Html, CSS, W3.CSS, JavaScript</b></h6>
-                                </h6>
-                                <p>
-                                    A website designed to showcase my background, expertise, and the projects I've worked on.</p>
-                                <div class="button-container">
-                                    <a href="https://github.com/Ajutzu/Ajutzu.github.io" target="_blank">
-                                        <button class="responsive-button">Repository</button>
-                                    </a>                                </div>
-                                <hr>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="w3-container w3-white w3-center w3-margin-top">
-            <p style="color: #4994ec">YOU CAN FIND ME ON</p>
-            <a href="https://www.facebook.com/profile.php?id=100019377120085" target="_blank"><i
-                    class="fa fa-facebook-official w3-hover-opacity w3-text-blue fa-2x w3-margin-right"></i></a>
-            <a href="https://x.com/_ajutzu" target="_blank"><i
-                    class="fa fa-twitter w3-hover-opacity w3-text-blue fa-2x w3-margin-right"></i></a>
-            <a href="https://github.com/Ajutzu" target="_blank"><i
-                    class="fa fa-github w3-hover-opacity w3-text-blue fa-2x w3-margin-right"></i></a>
-            <a href="" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-text-blue fa-2x"></i></a>
-            <p style="color: #4994ec;">POWERED BY <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-                    style="text-decoration: none;" class="w3-text-blue">W3.CSS</a></p>
-        </footer>
-
-        <div id="overlay"></div>
-        <div id="popup">
-            <h2 style="color:white">Why are you gae</h2>
-            <button onclick="closePopup()">Close</button>
-        </div>
-
-        <script>
-                    function showPopup() {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        }
-
-        // Show popup after 10 seconds
-        setTimeout(showPopup, 7000);
-
-            // JavaScript to handle tab switching
-            document.querySelectorAll('.topnav a').forEach(tab => {
-                tab.addEventListener('click', function (event) {
-                    event.preventDefault();
-
-                    document.querySelectorAll('.topnav a').forEach(link => link.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-                    this.classList.add('active');
-                    document.querySelector(this.getAttribute('href')).classList.add('active');
-                });
-            });
-        </script>
-</body>
-
+  </body>
 </html>
