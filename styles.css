@@ -47,6 +47,10 @@ a:hover {
 .badge-container {
   text-align: center;
   margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 10px; 
 }
 
 .badge-container a {
@@ -58,6 +62,7 @@ a:hover {
   padding: 5px;
   border-bottom: 1px solid white;
 }
+
 
 .popup {
   display: none; 
@@ -135,4 +140,69 @@ button:hover {
 
 .linkenpark:hover {
   border-bottom: 1px solid red;
+}
+
+.text {
+  font-size: 0.01vw;
+}
+
+.badge-container img {
+  border-radius: 4px;
+ }
+
+
+@media (max-width: 900px) {
+
+}
+
+
+@media (max-width: 600px) {
+  .popup {
+    width: 90%; 
+    padding: 15px;
+  }
+
+  .carousel-container {
+    width: 100%; 
+  }
+ 
+  button {
+    font-size: 12px;
+  }
+
+  .mySlides {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .description {
+    font-size: 0.9em;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 1rem !important;
+    -webkit-text-stroke: false; 
+  }
+
+  .bigtext {
+    font-size: 3rem !important;
+  }
+
+  .badge-container img {
+    width: 4rem; 
+    height: 2rem;
+    border-radius: 4px;
+   }
+  
+  .text {
+    font-size: 0.7rem !important; 
+  }
+  
+
+  hr {
+    width: 60%; 
+  }
 }
