@@ -1,0 +1,54 @@
+/* Full-screen loader */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+}
+
+:root {
+  --black: #000000;
+  --white: rgba(255, 255, 255, 0);
+  --gray-light: #d3d3d3;
+  --light-orange: #d7a449;
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 8px solid var(--gray-light);
+  border-top: 8px solid var(--light-orange);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body.loaded #loader {
+  display: none;
+}
+
+body.loaded #content {
+  display: block;
+}
