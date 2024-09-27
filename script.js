@@ -13,6 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 function revealOnScroll() {
   const sections = [
+    ".hero",
     ".about-section",
     ".skills-section",
     ".education",

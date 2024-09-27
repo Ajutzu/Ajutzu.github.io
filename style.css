@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
   --black: #000000;
@@ -25,9 +25,10 @@ body {
   background-attachment: scroll;
 }
 
+
 html {
   font-size: 12pt;
-  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+  font-family: "Dancing Script", cursive !;
 }
 
 /* On scroll Animation */
@@ -76,7 +77,7 @@ nav a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--black);
 }
 
 nav a:hover {
@@ -102,6 +103,71 @@ nav svg {
 
 /* Herosection Style */
 
+.hero-button {
+  position: relative;
+  padding: 30px 90px;
+  color: var(--black);
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.5em;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.hero-button:hover {
+  border: 2px solid var(--black);
+}
+
+.hero-button::before {
+  content: '';
+  position: absolute;
+  inset: 0 8px;
+  border-left: 2px solid var(--black);
+  border-right: 2px solid var(--black);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.hero-button::after {
+  content: '';
+  position: absolute;
+  inset: 8px 0;
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.hero-button:hover::before {
+  inset: 0px 8px;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+.hero-button:hover::after {
+  inset: 8px 0px;
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+}
+
 .hero {
   text-align: center;
   display: block;
@@ -124,22 +190,6 @@ nav svg {
   color: var(--light-orange);
 }
 
-.hero a {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: var(--black);
-  border: 2px solid var(--black);
-  text-decoration: none;
-  border-radius: 5px;
-  letter-spacing: 2px;
-  transition: background-color 0.3s;
-}
-
-.hero a:hover {
-  background-color: var(--black);
-  color: var(--white);
-}
 
 /*About Section */
 
@@ -429,6 +479,20 @@ nav svg {
   transform: translate(6px, -7px);
 }
 
+/* Hr Design */
+
+hr {
+  background-color: #fff;
+  padding: 0;
+  margin: 80px;
+}
+
+hr.hr-1 {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 /* Project Section */
 
 .projects-section {
@@ -544,7 +608,7 @@ nav svg {
   }
 
   .hero {
-    padding-top: 15vh;
+    padding-top: 20vh !important;
     padding-bottom: 25vh;
   }
 
@@ -703,6 +767,8 @@ nav svg {
     margin-bottom: 0.5rem;
   }
 }
+
+/* 360px Resolution */
 
 @media (max-width: 360px) {
   .education-title {
