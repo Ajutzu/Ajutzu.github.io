@@ -1,49 +1,43 @@
-/* Full-screen loader */
-
-:root {
-  --black: #000000;
-  --white: rgba(255, 255, 255, 0);
-  --gray-light: black;
-  --light-orange: none;
-}
-
-#loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: url(images/basckground2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
+/* Center loader in the middle of the screen */
+body {
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  background-image: url(images/background2.png);
 }
 
-.spinner {
-  border: 8px solid var(--gray-light);
-  border-top: 8px solid var(--light-orange);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
+/* Loader styling */
+.loader {
+  width: 80px;
+  aspect-ratio: 1;
+  display: grid;
+  color: #000; /* Pure black color */
+  background:
+    conic-gradient(from -153deg at right, #0000, currentColor 1deg 126deg, #0000 127deg) calc(50% + 5px) 0 / 10px 50%,
+    conic-gradient(from 27deg at left, #0000, currentColor 1deg 126deg, #0000 127deg) calc(50% - 5px) 100% / 10px 50%,
+    linear-gradient(to top right, currentColor 50%, #0000 0%) calc(50% + 10px) calc(50% - 10px) / 20px 20px,
+    linear-gradient(to bottom left, currentColor 50%, #0000 0%) calc(50% - 10px) calc(50% + 10px) / 20px 20px;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: l6 1.5s infinite linear;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1 / 1;
+  background: inherit;
+  transform: rotate(60deg);
+}
+
+.loader:after {
+  transform: rotate(120deg);
+}
+
+@keyframes l6 {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1turn);
   }
-}
-
-body.loaded #loader {
-  display: none;
-}
-
-body.loaded #content {
-  display: block;
 }

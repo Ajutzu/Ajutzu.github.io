@@ -32,6 +32,29 @@ html {
   font-size: 15pt;
 }
 
+/* Rain Drop */
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background-color: black;
+  animation: fall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+
 /* On scroll Animation */
 
 .hero,
@@ -498,16 +521,13 @@ hr.hr-1 {
 
 ::-webkit-scrollbar {
   width: 10px;
+  border-radius: 20px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  border: 1px solid black; 
-}
- 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: black; 
+  border-radius: 20px;
 }
 
 /* Project Section */
@@ -817,3 +837,4 @@ hr.hr-1 {
     margin-bottom: 0.5rem;
   }
 }
+
