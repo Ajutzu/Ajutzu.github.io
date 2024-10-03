@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
+                                                                                    /* Universal */
 
 :root {
   --black: black;
@@ -24,7 +25,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
-  font-family: 'Sawarabi Mincho', serif !important;
+  font-family: "Pixelify Sans", sans-serif !important;
+  font-optical-sizing: auto;
+}
+
+h1, h2 h3, h4 ,h5 ,h6{
+  color: white !important;
+  -webkit-text-stroke: 1px var(--black)
+}
+
+button, a, p {
+  color: black !important;
 }
 
 
@@ -32,36 +43,59 @@ html {
   font-size: 15pt;
 }
 
-/* Rain Drop */
-
-.raindrop {
-  position: absolute;
-  width: 2px;
-  height: 15px;
-  background-color: black;
-  animation: fall linear infinite;
-  opacity: 0.7;
+spline-viewer {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
 }
 
-@keyframes fall {
-  0% {
-    top: -50px;
-    opacity: 1;
-  }
-  100% {
-    top: 100vh;
-    opacity: 0;
-  }
+                                                                                    /* Loader Animation */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader {
+  width: calc(6*30px);
+  height: 50px;
+  display: flex;
+  color: #1cdcfe;
+  filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor) drop-shadow(120px 0 0 currentColor);
+  clip-path: inset(0 100% 0 0);
+  animation: l13 2s infinite steps(7);
+}
+
+#loader:before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  background: 
+    radial-gradient(farthest-side at right,currentColor 92%,#0000) left/20px 100% no-repeat,
+    radial-gradient(farthest-side,         currentColor 92%,#0000) right/17px 9px repeat-y;
+}
+
+@keyframes l13 {
+  100% {clip-path: inset(0 -30px 0 0)}
 }
 
 
-/* On scroll Animation */
+                                                                                    /* On scroll Animation */
 
 .hero,
 .about-section,
 .skills-section,
-.education,
-.projects-section {
+.education {
   opacity: 0;
   transform: translateY(30vh);
   transition: opacity 0.6s ease-out, transform 1.5s ease-out;
@@ -72,7 +106,13 @@ html {
   transform: translateY(0);
 }
 
-/* Navbar Style */
+                                                                                    /* Navbar Style */
+.sticky-container {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
 
 nav {
   height: 60px;
@@ -80,11 +120,11 @@ nav {
   justify-content: flex-end;
   align-items: center;
   font-weight: 500;
-  position: sticky;
   top: 0;
+  background-color: #1cdcfe;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  border-radius: 20px;
 }
 
 .links-container {
@@ -125,7 +165,7 @@ nav svg {
   display: none;
 }
 
-/* Herosection Style */
+                                                                                    /* Herosection Style */
 
 .hero-button {
   position: relative;
@@ -215,7 +255,7 @@ nav svg {
 }
 
 
-/*About Section */
+                                                                                    /*About Section */
 
 .about-section {
   position: relative;
@@ -243,7 +283,6 @@ nav svg {
 
 .about-section .content-column .email {
   position: relative;
-  color: var(--black);
   font-weight: 700;
   margin-bottom: 50px;
 }
@@ -259,87 +298,15 @@ nav svg {
   margin-left: 50px;
 }
 
-.about-section .image-column .inner-column:after {
-  position: absolute;
-  content: "";
-  right: 0px;
-  top: 0px;
-  left: 40px;
-  bottom: 100px;
-  z-index: -1;
-  border: 2px solid var(--black);
-}
 
 .about-section .image-column .inner-column .image {
   position: relative;
-}
-
-.about-section .image-column .inner-column .image:before {
-  position: absolute;
-  content: "";
-  left: -50px;
-  bottom: -50px;
-  width: 299px;
-  height: 299px;
-  background: url(img/pattern-2.png) no-repeat;
 }
 
 .about-section .image-column .inner-column .image img {
   position: relative;
   width: 100%;
   display: block;
-}
-
-.about-section .image-column .inner-column .image .overlay-box {
-  position: absolute;
-  left: 40px;
-  bottom: 48px;
-}
-
-.about-section .image-column .inner-column .image .overlay-box .year-box {
-  position: relative;
-  color: #252525;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.4em;
-  padding-left: 125px;
-}
-
-.about-section
-  .image-column
-  .inner-column
-  .image
-  .overlay-box
-  .year-box
-  .number {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 110px;
-  height: 110px;
-  color: var(--black);
-  font-size: 68px;
-  font-weight: 700;
-  line-height: 105px;
-  text-align: center;
-  background-color: #ffffff;
-  border: 1px solid #000000;
-}
-
-.about-section .btn-style-three:before {
-  position: absolute;
-  content: "";
-  left: 10px;
-  top: 10px;
-  z-index: -1;
-  right: -10px;
-  bottom: -10px;
-  background: url(https://i.ibb.co/DKn55Qz/pattern-1.jpg) repeat;
-}
-
-.about-section .btn-style-three:hover {
-  color: var(--text-color-primary);
-  background: var(--light-orange);
 }
 
 .about-section .btn-style-three {
@@ -356,16 +323,14 @@ nav svg {
   border: 2px solid var(--light-orange);
   font-family: "Arimo", sans-serif;
 }
-.sec-title2 {
-  color: var(--light-orange);
-}
+
 .sec-title {
   position: relative;
   padding-bottom: 40px;
 }
+
 .sec-title .title {
   position: relative;
-  color: var(--light-orange);
   font-size: 18px;
   font-weight: 700;
   padding-right: 50px;
@@ -373,6 +338,7 @@ nav svg {
   display: inline-block;
   text-transform: capitalize;
 }
+
 .sec-title .title:before {
   position: absolute;
   content: "";
@@ -380,10 +346,9 @@ nav svg {
   bottom: 7px;
   width: 40px;
   height: 1px;
-  background-color: var(--gray-light);
 }
 
-/* Skill Section */
+                                                                                    /* Skill Section */
 
 .skills-section {
   margin: 50px auto;
@@ -414,7 +379,6 @@ nav svg {
   height: 80px;
   object-fit: contain;
   transition: transform 0.3s, opacity 0.3s;
-  filter: grayscale(100%);
 }
 
 .skill img:hover {
@@ -503,7 +467,7 @@ nav svg {
   transform: translate(6px, -7px);
 }
 
-/* Hr Design */
+                                                                                    /* Hr Design */
 
 hr {
   background-color: var(--white);
@@ -517,20 +481,20 @@ hr.hr-1 {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-/* Custom Scrollbar */
+                                                                                    /* Custom Scrollbar */
 
 ::-webkit-scrollbar {
   width: 10px;
   border-radius: 20px;
 }
 
-/* Handle */
+                                                                                    /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: black; 
+  background: #1cdcfe; 
   border-radius: 20px;
 }
 
-/* Project Section */
+                                                                                    /* Project Section */
 
 .projects-section {
   text-align: center;
@@ -552,7 +516,7 @@ hr.hr-1 {
 }
 
 .project-card {
-  background-color: transparent;
+  background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -611,10 +575,10 @@ hr.hr-1 {
 
 .project-button:hover {
   background-color: var(--light-orange);
-  color: var(--white);
+  color: var(--white) !important;
 }
 
-/* 1200px Resolution */
+                                                                                    /* 1200px Resolution */
 
 @media (max-width: 1200px) {
   .hero {
@@ -632,7 +596,7 @@ hr.hr-1 {
   }
 }
 
-/* 768px Resolution */
+                                                                                    /* 768px Resolution */
 
 @media (max-width: 768px) {
   .skill img {
@@ -667,7 +631,7 @@ hr.hr-1 {
   }
 }
 
-/* 520px Resolution */
+                                                                                    /* 520px Resolution */
 
 @media (max-width: 520px) {
   .education-data {
@@ -772,7 +736,7 @@ hr.hr-1 {
   }
 }
 
-/* 420px Resolution */
+                                                                                    /* 420px Resolution */
 
 @media (max-width: 420px) {
   .education-title {
@@ -805,7 +769,7 @@ hr.hr-1 {
   }
 }
 
-/* 360px Resolution */
+                                                                                    /* 360px Resolution */
 
 @media (max-width: 360px) {
   .education-title {

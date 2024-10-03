@@ -1,4 +1,4 @@
-// On Scroll Link to Sections
+                                                                                    // On Scroll Link to Sections
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -9,16 +9,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// On Scroll Showing Sections
+                                                                                    // Detect Spline
+
+window.addEventListener("load", function () {
+  const splineViewer = document.getElementById("splineCanvas");
+
+  setTimeout(() => {
+    document.getElementById("loader-wrapper").style.display = "none";
+  }, 3000); 
+});
+
+                                                                                    // On Scroll Showing Sections
 
 function revealOnScroll() {
-  const sections = [
-    ".hero",
-    ".about-section",
-    ".skills-section",
-    ".education",
-    ".projects-section",
-  ];
+  const sections = [".hero", ".about-section", ".skills-section", ".education"];
 
   sections.forEach((value) => {
     const section = document.querySelector(value);
@@ -32,8 +36,6 @@ function revealOnScroll() {
     }
   });
 }
-
-// On Hero Showing Sections
 
 function revealHero() {
   const hero = document.querySelector(".hero");
@@ -49,31 +51,3 @@ window.addEventListener("load", () => {
   revealOnScroll();
 });
 
-// Rain Drop Effects
-
-function createRain() {
-  const rainContainer = document.createElement('div');
-  rainContainer.style.position = 'fixed';
-  rainContainer.style.top = 0;
-  rainContainer.style.left = 0;
-  rainContainer.style.width = '100%';
-  rainContainer.style.height = '100%';
-  rainContainer.style.pointerEvents = 'none'; // To make sure rain doesn't block interaction
-  document.body.appendChild(rainContainer);
-
-  const raindropCount = 100; // Adjust this value for more or fewer raindrops
-  for (let i = 0; i < raindropCount; i++) {
-    const raindrop = document.createElement('div');
-    raindrop.classList.add('raindrop');
-
-    // Randomize position and speed
-    raindrop.style.left = Math.random() * 100 + 'vw';
-    raindrop.style.animationDuration = Math.random() * 2 + 1 + 's'; // Speed of fall
-    raindrop.style.animationDelay = Math.random() * 2 + 's';
-
-    rainContainer.appendChild(raindrop);
-  }
-}
-
-// Call the function on page load
-window.onload = createRain;
