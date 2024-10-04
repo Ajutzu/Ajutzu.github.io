@@ -90,6 +90,33 @@ spline-viewer {
 }
 
 
+                                                                                    /* Swal Fire */
+
+.swal2-title {
+      color: var(--black); 
+      font-weight: bold;
+}
+
+
+.swal2-confirm {
+      background-color: #3e82c5 !important; 
+      color: var(--black)!important; 
+      border: none;
+      outline: none;
+}
+
+ 
+.swal2-confirm:focus {
+      outline: 2px solid black !important; 
+      -webkit-outline: 2px solid black !important; 
+}
+
+
+.swal2-html-container {
+      border: 2px solid black;
+      font-size: 16px;
+}
+
                                                                                     /* On scroll Animation */
 
 .hero,

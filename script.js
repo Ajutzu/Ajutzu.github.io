@@ -51,3 +51,20 @@ window.addEventListener("load", () => {
   revealOnScroll();
 });
 
+
+                                                                                    // Swalfire
+window.onload = function() {
+    Swal.fire({
+      title: "<span class='text-center'>Background Controls<br><span style='border:2px solid black; padding: 4px; border-radius: 4px; margin: 15px; display: inline-block;'>W</span><br> <span style='border:2px solid black; padding: 4px; border-radius: 4px;'>A</span>      <span style='border:2px solid black; padding: 4px; border-radius: 4px;'>S</span>      <span style='border:2px solid black; padding: 4px; border-radius: 4px;'>D</span></span>",
+      width: 600,
+      padding: "3em",
+      color: "#87c43a",  
+      background: "#3e82c5",  
+      backdrop: `
+        rgba(0,0,123,0.4)
+        left top
+        no-repeat
+      `,
+      confirmButtonText: 'OK',
+    });
+};
