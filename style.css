@@ -95,16 +95,18 @@ spline-viewer {
 .hero,
 .about-section,
 .skills-section,
-.education {
+.education,
+.projects-section {
   opacity: 0;
-  transform: translateY(30vh);
-  transition: opacity 0.6s ease-out, transform 1.5s ease-out;
+  transform: translatey(-20vh);
+  transition: opacity 2s ease-out, transform 2s ease-in;
 }
 
 .show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translatex(0);
 }
+
 
                                                                                     /* Navbar Style */
 .sticky-container {
@@ -391,7 +393,7 @@ nav svg {
   font-size: 16px;
 }
 
-/* Education Section */
+                                                                                    /* Education Section */
 
 .education {
   width: 100%;

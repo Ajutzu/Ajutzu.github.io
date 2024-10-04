@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
                                                                                     // On Scroll Showing Sections
 
 function revealOnScroll() {
-  const sections = [".hero", ".about-section", ".skills-section", ".education"];
+  const sections = [".hero", ".about-section", ".skills-section", ".education", ".projects-section"];
 
   sections.forEach((value) => {
     const section = document.querySelector(value);
