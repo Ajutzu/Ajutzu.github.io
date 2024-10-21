@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
-                                                                                    /* Universal */
+                                                                                                                                                                        /* Universal */
 
 :root {
   --black: black;
@@ -38,11 +38,6 @@ button, a, p {
   color: black !important;
 }
 
-
-html {
-  font-size: 15pt;
-}
-
 spline-viewer {
   position: fixed; 
   top: 0;
@@ -52,7 +47,7 @@ spline-viewer {
   z-index: -1; 
 }
 
-                                                                                    /* Loader Animation */
+                                                                                                                                                                        /* Loader Animation */
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -90,7 +85,7 @@ spline-viewer {
 }
 
 
-                                                                                    /* Swal Fire */
+                                                                                                                                                                        /* Swal Fire */
 
 .swal2-title {
       color: var(--black); 
@@ -117,25 +112,7 @@ spline-viewer {
       font-size: 16px;
 }
 
-                                                                                    /* On scroll Animation */
-
-.hero,
-.about-section,
-.skills-section,
-.education,
-.projects-section {
-  opacity: 0;
-  transform: translatey(-20vh);
-  transition: opacity 2s ease-out, transform 2s ease-in;
-}
-
-.show {
-  opacity: 1;
-  transform: translatex(0);
-}
-
-
-                                                                                    /* Navbar Style */
+                                                                                                                                                                        /* Navbar Style */
 .sticky-container {
     position: -webkit-sticky; 
     position: sticky;
@@ -194,7 +171,7 @@ nav svg {
   display: none;
 }
 
-                                                                                    /* Herosection Style */
+                                                                                                                                                                        /* Herosection Style */
 
 .hero-button {
   position: relative;
@@ -204,7 +181,7 @@ nav svg {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 1.5em;
+  font-size: 1rem;
   border: 2px solid transparent;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -284,11 +261,24 @@ nav svg {
 }
 
 
-                                                                                    /*About Section */
+                                                                                                                                                                        /*About Section */
+
+.aboutContainer {
+  background: rgba(255, 255, 255, 0.28) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
 
 .about-section {
   position: relative;
   padding: 120px 0px;
+}
+
+.about-section img {
+  border-radius: 10vh 20vh !important;
 }
 
 .about-section .content-column {
@@ -377,7 +367,7 @@ nav svg {
   height: 1px;
 }
 
-                                                                                    /* Skill Section */
+                                                                                                                                                                        /* Skill Section */
 
 .skills-section {
   margin: 50px auto;
@@ -420,110 +410,65 @@ nav svg {
   font-size: 16px;
 }
 
-                                                                                    /* Education Section */
+                                                                                                                                                                        /* Education Section */
 
-.education {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding: 0;
 }
 
-.education-title {
-  margin: auto;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 5%;
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 30px; 
 }
 
-.education-title h2 {
-  font-size: var(--h3-font-size);
-  color: var(--light-orange);
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    height: 100%;
+    width: 3px;
+    background-color: #fff; 
+    z-index: 1;
 }
 
-.education-data {
-  display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1.5rem;
+.timeline-content {
+    background-color: #f9f9f9; 
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+    z-index: 2; 
 }
 
-.education-data-left {
-  text-align-last: end;
+.timeline-image {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 5px; 
 }
 
-.education-school {
-  letter-spacing: 1px;
-  font-size: 1.3rem;
-  font-weight: medium;
+.date {
+    display: block;
+    font-weight: bold;
+    color: #1cdcfe; 
 }
 
-.education-sub {
-  display: inline-block;
-  font-size: 0.9rem;
-  font-style: italic;
-  font-weight: thin;
-}
-
-.education-address {
-  display: inline-block;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  font-weight: thin;
-}
-
-.education-date {
-  font-size: 0.8rem;
-  font-weight: lighter;
-  font-style: italic;
-  color: var(--text-color-primary);
-}
-
-.education-round {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  background-color: var(--black);
-  border-radius: 50%;
-}
-
-.education-line {
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: var(--black);
-  transform: translate(6px, -7px);
-}
-
-                                                                                    /* Hr Design */
-
-hr {
-  background-color: var(--white);
-  padding: 0;
-  margin: 80px;
-}
-
-hr.hr-1 {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-                                                                                    /* Custom Scrollbar */
+                                                                                                                                                                        /* Custom Scrollbar */
 
 ::-webkit-scrollbar {
   width: 10px;
   border-radius: 20px;
 }
 
-                                                                                    /* Handle */
+                                                                                                                                                                        /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #1cdcfe; 
   border-radius: 20px;
 }
 
-                                                                                    /* Project Section */
+                                                                                                                                                                        /* Project Section */
 
 .projects-section {
   text-align: center;
@@ -607,7 +552,62 @@ hr.hr-1 {
   color: var(--white) !important;
 }
 
-                                                                                    /* 1200px Resolution */
+                                                                                                                                                                        /* Chat Bot */
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Change this from right to left */
+  z-index: 1000;
+  background-color: #1cdcfe;
+  border: 2px solid #fff;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+  display: none; 
+  position: fixed;
+  bottom: 90px;
+  left: 20px; /* Change this from right to left */
+  width: 300px;
+  max-height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.chat-box-header {
+  background-color: #1cdcfe;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.chat-box-body {
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.chat-box-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+
+                                                                                                                                                                        /* 1200px Resolution */
 
 @media (max-width: 1200px) {
   .hero {
@@ -625,7 +625,25 @@ hr.hr-1 {
   }
 }
 
-                                                                                    /* 768px Resolution */
+                                                                                                                                                                        /* Above 992px Resolution */
+
+@media (min-width: 992px) {
+  section {
+    height: 100vh !important;
+  }
+}
+
+
+                                                                                                                                                                        /* Below 991px Resolution */
+                                                                                                                                                                    
+@media (max-width: 991px) {
+  section {
+    height: auto !important;
+  }
+}
+
+
+                                                                                                                                                                        /* 768px Resolution */
 
 @media (max-width: 768px) {
   .skill img {
@@ -660,44 +678,12 @@ hr.hr-1 {
   }
 }
 
-                                                                                    /* 520px Resolution */
+                                                                                                                                                                        /* 520px Resolution */
 
 @media (max-width: 520px) {
-  .education-data {
-    margin: 10px;
-  }
 
   .about-section {
     align-items: center;
-  }
-
-  .education-title {
-    margin-bottom: 5%;
-  }
-
-  .education-title h2 {
-    font-size: 3rem;
-  }
-
-  .education-title span {
-    font-size: 1.3rem;
-  }
-
-  .education-school {
-    letter-spacing: 1px;
-    font-size: 1.1rem;
-  }
-
-  .education-sub {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
-  }
-
-  .education-address {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
   }
 
   .links-container {
@@ -762,72 +748,6 @@ hr.hr-1 {
   .hero a {
     font-size: 0.8em;
     padding: 6px 14px;
-  }
-}
-
-                                                                                    /* 420px Resolution */
-
-@media (max-width: 420px) {
-  .education-title {
-    margin-bottom: 10%;
-  }
-
-  .education-title h2 {
-    font-size: 2.5rem;
-  }
-
-  .education-title span {
-    font-size: 1rem;
-  }
-
-  .education-school {
-    letter-spacing: 0.5px;
-    font-size: 1rem;
-  }
-
-  .education-sub {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 0.8rem;
-  }
-
-  .education-address {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-                                                                                    /* 360px Resolution */
-
-@media (max-width: 360px) {
-  .education-title {
-    margin-bottom: 10%;
-  }
-
-  .education-title h2 {
-    font-size: 2rem;
-  }
-
-  .education-title span {
-    font-size: 1rem;
-  }
-
-  .education-school {
-    letter-spacing: 0.5px;
-    font-size: 1rem;
-  }
-
-  .education-sub {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 0.8rem;
-  }
-
-  .education-address {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
   }
 }
 
