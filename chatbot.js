@@ -47,17 +47,32 @@ function getResponse(userInput) {
         bye: "See you!",
         how: "I'm doing fine, and you?",
         default: "Could you please rephrase that?",
-        "what are you offering":
-            "I offer freelance services for creating static websites starting at 500 pesos. For dynamic websites or systems, the price varies depending on the complexity of the system.",
-        freelance:
-            "I can build static websites for 500-1000 pesos, and dynamic websites or systems will vary based on your requirements.",
-    };
+        "what are you offering": "I offer freelance services for creating static websites starting at 500 pesos. For dynamic websites or systems, the price varies depending on the complexity of the system.",
+        freelancer: "I can build static websites for 500-1000 pesos, and dynamic websites or systems will vary based on your requirements.",
+        freelance: "I can build static websites for 500-1000 pesos, and dynamic websites or systems will vary based on your requirements.",
+        "your gay": "Im not gay im straight T_T",
+        "aj gay": "Im not gay im straight T_T",
+        "aj bading": "Im not gay im straight T_T",
+        handsome: "Yes my creator is handsome",
+        tanginamo: "tanginamo mo den hayop ka",
+        ugly: "Nope Nope Nope",
+        history: `
+        <ul>
+            <li>I started programming in high school with HTML and CSS.</li>
+            <li>In senior high school, I began programming using Blockly during my work immersion.</li>
+            <li>In my first year of college, I learned the basics of programming and some data structures in C++, along with flowcharting and pseudocode.</li>
+            <li>In my second year of college, I learned the four pillars of Object-Oriented Programming (OOP) and how to implement them. I also studied relational databases (MySQL, PostgreSQL) and non-relational databases (MongoDB), and experimented with PHP, C#, Java, and Python at an entry level, including Tkinter.</li>
+            <li>In my third year of college, I enhanced my skills in PHP, learned about APIs, and studied advanced HTML, CSS, Bootstrap, JavaScript, AJAX, and jQuery.</li>
+        </ul>
+    `
+        };
 
-    userInput = userInput.toLowerCase().trim();
-    for (const key in responses) {
-        if (userInput.includes(key)) {
-            return responses[key];
-        }
+    userInput = userInput.toLowerCase().trim(); // Normalize input
+
+    // Check if the input matches any of the keys in responses
+    if (responses[userInput]) {
+        return responses[userInput]; // Return the response if there's a direct match
+    } else {
+        return responses["default"]; // Default response if no match found
     }
-    return responses["default"]; // Default response if no match found
 }
