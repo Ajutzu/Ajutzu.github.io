@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Castillo</title>
+
+    <!-- Portfolio Web Icon -->
+    <link rel="icon" href="images/icon.png" />
+
+    <!-- My Own CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- My Own JS -->
+    <script src="script.js"></script>
+
+    <!-- My Chatbot JS -->
+    <script src="chatbot.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- On Scroll Animation CDN CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- On Scroll Animation CDN JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Include Spline 3D -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
+
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container pt-3 sticky-container" style="position: fixed; top: 0; left: 0; right: 0;">
+        <nav>
+
+            <!-- Hamburger & Close Icon -->
+            <input type="checkbox" id="sidebar-active" />
+            <label for="sidebar-active" class="open-sidebar-button">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <i class="fa-solid fa-x"></i>
+                </label>
+
+                <!-- Nav Links -->
+                <a class="home-link" href="index.php"><i class="fas fa-user mx-2"></i>AJ CASTILLO</a>
+                <a href="#aboutSection"><i class="fas fa-info-circle mx-2"></i>About</a>
+                <a href="#educationSection"><i class="fas fa-graduation-cap mx-2"></i>Education</a>
+                <a href="#techStacksSection"><i class="fas fa-code mx-2"></i>Tech Stack</a>
+                <a href="#projectSection"><i class="fas fa-project-diagram mx-2"></i>Projects</a>
+            </div>
+
+        </nav>
+    </div>
+
+    <!-- Home Section -->
+    <section class="d-flex align-items-center justify-content-center ">
+
+        <!-- Home Section Content -->
+        <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+            <div class="text-center">
+                <p class="passionate">PASSIONATE STUDENT | WEBSITE & APPS</p>
+                <h1>
+                    "Turning Ideas into
+                    <span style="color: #1cdcfe;">Intuitive</span><br />
+                    Journeys for Every User."
+                </h1>
+                <p class="me">Hello, I'm AJ, an IT Student from the Philippines</p>
+                <a href="#projectSection" class="hero-button">My Project</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section class="about-section d-flex align-items-center justify-content-center" id="aboutSection">
+        <div class="container aboutContainer p-4">
+            <div class="row">
+                <!--Content Column-->
+                <div class="content-column col-md-6 col-sm-12 col-xs-12 px-5" data-aos="fade-right">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <div class="title">About Me</div>
+                            <h2>
+                                I am Programmer<br />
+                                Hello I'm AJ Castillo
+                            </h2>
+                        </div>
+                        <div class="text">
+                            "I love programming and web development. I'm currently working
+                            on an AI integrated website project. I'm always looking to improve
+                            my skills and learn new things in the industry. I love asking
+                            questions to seniors because they provide valuable knowledge."
+                        </div>
+                        <div class="email">
+                            Reach me:
+                            <span class="theme_color">aeronjamescastillo6@gmail.com</span>
+                        </div>
+                        <a href="about.html" class="theme-btn btn-style-three">Resume</a>
+                    </div>
+                </div>
+
+                <!--Image Column-->
+                <div class="image-column col-md-6 col-sm-12 col-xs-12" data-aos="fade-left">
+                    <div class="inner-column" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <span><img src="images/Profile.png" alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Tech Stacks Section -->
+    <section class="d-flex align-items-center justify-content-center" id="techStacksSection">
+
+        <div class="skills-section">
+            <h2>Tech Stack</h2>
+
+            <!-- Tech Icons -->
+            <div class="skills-icons" data-aos="flip-up">
+                <div class="skill">
+                    <img src="https://img.icons8.com/ios-filled/80/github.png" alt="GitHub" />
+                    <p>GitHub</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/color/80/html-5.png" alt="HTML5" />
+                    <p>HTML5</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/color/80/css3.png" alt="CSS3" />
+                    <p>CSS3</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/color/80/javascript.png" alt="JavaScript" />
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/color/80/bootstrap.png" alt="Bootstrap" />
+                    <p>Bootstrap</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/color/80/adobe-photoshop.png" alt="Photoshop" />
+                    <p>Photoshop</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/offices/80/php-logo.png" alt="PHP" />
+                    <p>PHP</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/color/80/postgreesql.png" alt="PostgreSQL" />
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/ios-filled/80/mysql.png" alt="MySQL" />
+                    <p>MySQL</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/color/80/python.png" alt="Python" />
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="https://img.icons8.com/ios-filled/80/c-plus-plus-logo.png" alt="C++" />
+                    <p>C++</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Education Section -->
+    <section class="container mt-5" id="educationSection">
+        <h2 class="text-center pb-3 mb-5">Education</h2>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content" data-aos="fade-right">
+                            <span class="date">2009 - 2016</span>
+                            <h5 class="card-title">Elementary Education</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">PILM Elementary School</h6>
+                            <p class="card-text">Attended PILM Elementary School in San Jose, Batangas, where I
+                                developed foundational skills and a love for learning.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content" data-aos="fade-right">
+                            <span class="date">2016 - 2020</span>
+                            <h5 class="card-title">High School Education</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Saint Joseph Academy</h6>
+                            <p class="card-text">Completed my secondary education at Saint Joseph Academy, San Jose,
+                                Batangas, excelling in various subjects and extracurricular activities.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content" data-aos="fade-right">
+                            <span class="date">2020 - 2022</span>
+                            <h5 class="card-title">STEM Program</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Saint Joseph Academy</h6>
+                            <p class="card-text">Enrolled in the Science, Technology, Engineering, and Mathematics
+                                (STEM) program, enhancing my analytical and technical skills.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content" data-aos="fade-right">
+                            <span class="date">2022 - Present</span>
+                            <h5 class="card-title">BSIT Program</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">BSU - Lipa Campus</h6>
+                            <p class="card-text">Currently pursuing BSIT at BSU - Lipa Campus, focusing on software
+                                development and programming.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Project Section-->
+    <section class="d-flex align-items-center justify-content-center" id="projectSection">
+        <div class="projects-section">
+            <h2 class="titlekopo">My Projects</h2>
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="zoom-out-right">
+                    <div class="project-image">
+                        <img src="/images/icon.png" alt="Project 1" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Simple Chat Bot</h3>
+                        <p class="project-description">
+                            This is a simple activity for advanced computer programming. It’s
+                            a basic chatbot that uses an algorithm to check the probability of
+                            questions, then generates an answer. It uses arrays, not a
+                            database, since I’m just starting to learn programming.
+                        </p>
+                        <a href="https://github.com/Ajutzu/Chat-Bot-Project-ACP" class="project-button">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="project-image">
+                        <img src="/images/icon.png" alt="Project 2" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Appointment and Management System</h3>
+                        <p class="project-description">
+                            This is the first project I’ve made that connects to a database.
+                            I’ve just started learning it, so the code isn’t very well-written
+                            because I used the Big Bang methodology and rushed it with the
+                            help of AI. Also, this is just on a local host.
+                        </p>
+                        <a href="https://github.com/Ajutzu/System-Project-ADBMS" class="project-button">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="zoom-out-left">
+                    <div class="project-image">
+                        <img src="/images/icon.png" alt="Project 3" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website </h3>
+                        <p class="project-description">
+                            I created this static website to showcase my skills and experience. It features a list of my
+                            projects and
+                            provides an overview of my work.
+                        </p>
+                        <a href="https://ajutzu.github.io/" class="project-button">View Project</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <hr>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-6 my-5 px-4">
+        <div
+            class="col-12 col-sm-4 d-flex align-items-center justify-content-center justify-content-sm-start mb-4 mb-sm-0">
+            <span class="text-muted">&copy; 2024 <strong>Aj Castillo</strong>, Inc</span>
+        </div>
+
+        <ul class="nav col-12 col-sm-4 justify-content-center justify-content-sm-end list-unstyled d-flex">
+            <li class="ms-3">
+                <a class="text-muted" href="https://github.com/ajutzu" target="_blank">
+                    <i class="fab fa-github" style="font-size: 24px;"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a class="text-muted" href="https://x.com/_ajutzu" target="_blank">
+                    <i class="fab fa-twitter" style="font-size: 24px;"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a class="text-muted" href="https://www.facebook.com/profile.php?id=100019377120085" target="_blank">
+                    <i class="fab fa-facebook-f" style="font-size: 24px;"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a class="text-muted" href="https://linkedin.com/in/yourusername" target="_blank">
+                    <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+
+
+    <!-- Live Chat Button -->
+    <div class="chat-button" id="chatButton" onclick="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-box" id="chatBox" style="display: none;">
+        <div class="chat-box-header">
+            <i class="fa-solid fa-robot mx-2"></i> AJ Chat-Bot
+            <span class="float-end" style="cursor: pointer;" id="closeChat" onclick="toggleChat()">&times;</span>
+        </div>
+        <div class="chat-box-body" id="chatBody">
+            <p>Hello! I'm AJ. Ask me what I'm doing, what I can offer, or about my history.</p>
+        </div>
+        <div class="chat-box-footer">
+            <form id="chatForm" onsubmit="return handleSubmit();">
+                <input type="text" id="userInput" class="form-control" placeholder="Type your message..."
+                    autocomplete="off">
+                <button type="submit" style="display: none;"></button> <!-- Hidden submit button to allow Enter key -->
+            </form>
+        </div>
+    </div>
+
+
+    <!-- On Scroll Animmation Initialized -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Spine 3D Source -->
+    <spline-viewer url="https://prod.spline.design/e-EBPOCmCQa7a6W8/scene.splinecode"></spline-viewer>
+
+</body>
+
+</html>

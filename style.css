@@ -606,6 +606,28 @@ nav svg {
   border-top: 1px solid #ddd;
 }
 
+.user-message {
+  background-color: #1cdcfe; 
+  color: black; 
+  padding: 10px;
+  border-radius: 10px; 
+  margin: 5px 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-end; 
+}
+
+.bot-message {
+  border: 1px solid black;
+  color: black;
+  padding: 10px; 
+  border-radius: 10px; 
+  margin: 5px 0; 
+  display: flex; 
+  align-items: center;
+  justify-content: flex-start; 
+}
+
 
                                                                                                                                                                         /* 1200px Resolution */
 

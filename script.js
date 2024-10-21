@@ -1,47 +1,3 @@
-<script>
-
- AOS.init();
- 
-                                                                                                                                                                        // Chat Bot
-
-$(document).ready(function() {
-    // Handle form submission
-    $('#chatForm').submit(function(e) {
-        e.preventDefault(); // Prevent form from reloading the page
-
-        var userInput = $('#userInput').val(); // Get the user input
-        if (userInput.trim() !== "") { // Check if input is not empty
-            // Add the user's message to the chat
-            $('#chatBody').append('<p><strong style="color: #1cdcfe">You:</strong> ' + userInput + '</p>');
-            
-            // Send the message to the PHP chatbot script
-            $.ajax({
-                type: 'POST',
-                url: 'chatbot/chatbot.php', // The PHP file that contains your chatbot logic
-                data: { user_input: userInput },
-                success: function(response) {
-                    // Add the bot's response to the chat
-                    $('#chatBody').append('<p><strong style="color: #1cdcfe"><i class="fa-solid fa-robot mr-1"></i> Bot:</strong> ' + response + '</p>');
-                    
-                    // Scroll to the bottom of the chat
-                    $('#chatBody').scrollTop($('#chatBody')[0].scrollHeight);
-                },
-                error: function() {
-                    $('#chatBody').append('<p><strong>Bot:</strong> Sorry, something went wrong!</p>');
-                }
-            });
-        }
-
-        // Clear the input field after submission
-        $('#userInput').val('');
-    });
-
-    // Close chat function (for demonstration purposes)
-    $('#closeChat').click(function() {
-        $('#chatBox').hide();
-    });
-});
-
 
                                                                                                                                                                         // Detect Spline
 
@@ -87,4 +43,3 @@ window.onload = function() {
         chatBox.style.display = 'none';
   });
 
-</script>
