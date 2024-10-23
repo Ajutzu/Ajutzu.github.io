@@ -1,41 +1,40 @@
-// Chat Bot
+                                                                                                                                                                        // Chat Bot
 
-// Toggle chat box visibility
+                                                                                                                                                                        // Toggle chat box visibility
 function toggleChat() {
   const chatBox = document.getElementById("chatBox");
   chatBox.style.display = chatBox.style.display === "none" ? "block" : "none";
 }
 
-// Handle form submission
+                                                                                                                                                                        // Handle form submission
 function handleSubmit() {
   const userInput = document.getElementById("userInput").value;
   const response = getResponse(userInput);
   displayMessage(userInput, "user");
   displayMessage(response, "bot");
-  document.getElementById("userInput").value = ""; // Clear input
-  return false; // Prevent form submission
+  document.getElementById("userInput").value = "";
+  return false; 
 }
 
-// Display message in chat
+                                                                                                                                                                        // Display message in chat
 function displayMessage(message, sender) {
   const chatBody = document.getElementById("chatBody");
   const messageElement = document.createElement("div");
   messageElement.textContent = message;
 
-  // Set class based on sender
   if (sender === "user") {
-    messageElement.className = "user-message"; // Add user message class
-    messageElement.innerHTML = `<i class="fas fa-user" style="margin-right: 5px;"></i>${message}`; // Add user icon
+    messageElement.className = "user-message";
+    messageElement.innerHTML = `<i class="fas fa-user" style="margin-right: 5px;"></i>${message}`; 
   } else {
-    messageElement.className = "bot-message"; // Add bot message class
-    messageElement.innerHTML = `<i class="fa-solid fa-robot" style="margin-right: 5px;"></i>${message}`; // Add bot icon
+    messageElement.className = "bot-message"; 
+    messageElement.innerHTML = `<i class="fa-solid fa-robot" style="margin-right: 5px;"></i>${message}`; 
   }
 
   chatBody.appendChild(messageElement);
-  chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+  chatBody.scrollTop = chatBody.scrollHeight; 
 }
 
-// Generate chatbot response based on user input
+                                                                                                                                                                        // Generate chatbot response 
 function getResponse(userInput) {
   const responses = {
     hello: "Hello!",
@@ -112,12 +111,11 @@ function getResponse(userInput) {
     `,
   };
 
-  userInput = userInput.toLowerCase().trim(); // Normalize input
+  userInput = userInput.toLowerCase().trim(); 
 
-  // Check if the input matches any of the keys in responses
   if (responses[userInput]) {
-    return responses[userInput]; // Return the response if there's a direct match
+    return responses[userInput]; 
   } else {
-    return responses["default"]; // Default response if no match found
+    return responses["default"]; 
   }
 }
