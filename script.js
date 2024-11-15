@@ -8,3 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function downloadCV() {
+    const cvPath = 'AJ-RESUME.pdf';
+    
+    const link = document.createElement('a');
+    link.href = cvPath;
+    link.download = 'AJ_Castillo_CV.pdf'; 
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
