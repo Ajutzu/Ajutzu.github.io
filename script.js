@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function downloadCV() {
-    const cvPath = 'AJ-RESUME.pdf';
+    const cvPath = 'AJ-Resume.pdf';
     
     const link = document.createElement('a');
     link.href = cvPath;
