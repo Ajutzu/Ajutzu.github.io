@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function downloadCV() {
-    const cvPath = 'cv.pdf';
+    const cvPath = 'assets/cv.pdf';
     
     const link = document.createElement('a');
     link.href = cvPath;
