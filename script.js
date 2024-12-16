@@ -1,3 +1,4 @@
+// Flashlight Hover First Section
 document.addEventListener('DOMContentLoaded', () => {
     const light = document.querySelector('.cursor-light');
     
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Dowload CV
 function downloadCV() {
     const cvPath = 'assets/cv.pdf';
     
@@ -22,7 +24,7 @@ function downloadCV() {
 }
 
 
-// Prevent context menu
+// Prevent Context Menu
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 // Prevent F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
