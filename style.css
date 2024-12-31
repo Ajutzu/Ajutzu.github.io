@@ -497,6 +497,10 @@ td a:hover {
   #home {
     height: 80vh !important;
   }
+
+  #contact {
+    height: 75vh !important; 
+  }
 }
                                                                                                                                                                     
 @media (max-width: 991px) {
