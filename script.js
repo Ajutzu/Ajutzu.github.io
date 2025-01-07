@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+});
+
 // Dowload CV
 function downloadCV() {
     const cvPath = 'assets/cv.pdf';
@@ -45,6 +53,8 @@ document.addEventListener('keydown', (e) => {
       e.preventDefault();
   }
 });
+
+
 
 
 

@@ -11,6 +11,9 @@ body {
   background-color: var(--pallete-1) !important;
 }
 
+.hidden {
+  display: none;
+}
 /* Custom Scrollbar */
 
 ::-webkit-scrollbar {
